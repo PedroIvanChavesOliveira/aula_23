@@ -19,6 +19,13 @@ class MainActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
+        //Código para mudar de tela ao clicar no botão
+        viewModel.onDataSaved.observe(this, {
+            if(it == true) {
+                tlBar.getTabAt(1)?.select()
+            }
+        })
+
         tlBar.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 when(tab?.position) {

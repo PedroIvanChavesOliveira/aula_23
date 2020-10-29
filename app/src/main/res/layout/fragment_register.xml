@@ -20,6 +20,7 @@
             android:id="@+id/tietName"
             style="@style/EditTextDefault"
             android:inputType="textPersonName"
+            android:tag="name"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -36,6 +37,7 @@
             android:id="@+id/tietEmail"
             style="@style/EditTextDefault"
             android:inputType="textEmailAddress"
+            android:tag="email"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -52,6 +54,7 @@
             android:id="@+id/tietPhone"
             style="@style/EditTextDefault"
             android:inputType="number"
+            android:tag="phone"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -69,6 +72,7 @@
             android:id="@+id/tietPassword"
             style="@style/EditTextDefault"
             android:inputType="textPassword"
+            android:tag="password"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -85,6 +89,7 @@
             android:id="@+id/tietConfirmPassword"
             style="@style/EditTextDefault"
             android:inputType="textPassword"
+            android:tag="confirmPassword"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -94,6 +99,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         style="@style/buttonDefault"
+        android:enabled="false"
         android:layout_marginBottom="@dimen/fifteen_dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

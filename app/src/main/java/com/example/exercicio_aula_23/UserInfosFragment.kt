@@ -5,8 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.observe
 import kotlinx.android.synthetic.main.fragment_user_infos.*
@@ -27,12 +25,13 @@ class UserInfosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //Código para salvar os dados neste fragment
         activity?.let {
             viewModel = ViewModelProvider(it).get(MainViewModel::class.java)
 
             viewModel.updatedPartner.observe(this) {
                 activity?.tvResultInfos?.text =
-                    "Nome do Sócio: ${it.name}\nE-mail do Sócio: ${it.email}\nTelefone do Sócio: ${it.phone}"
+                    "Nome do Sócio: ${it.name}\n\nE-mail do Sócio: ${it.email}\n\nTelefone do Sócio: ${it.phone}"
             }
         }
     }
